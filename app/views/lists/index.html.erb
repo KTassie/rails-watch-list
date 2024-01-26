@@ -1,10 +1,7 @@
-<div class="card-form">
-<h1>All Lists</h1>
-
-
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<% @lists.each do |list| %>
+<div class="movie-card">
+  <div class="card-category">
+    <%= link_to list.name, list_path(list), class: "list-font" %>
 </div>
+</div>
+  <% end %>
