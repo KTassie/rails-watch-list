@@ -3,6 +3,7 @@
   width: 500px;
   filter: drop-shadow(5px 5px 10px #000000);
   font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
 
 }
 
@@ -36,4 +37,10 @@
   color: white;
   font-weight: bold;
   font-size: x-large;
+}
+
+.list-font:hover {
+  color: magenta;
+  font-weight: bolder;
+  transition: 2s;
 }

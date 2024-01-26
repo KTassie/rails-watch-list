@@ -1,15 +1,15 @@
 <div class="card-form">
 <h1><%= @list.name %></h1>
 
-<ul>
   <% @list.bookmarks.each do |bookmark| %>
-    <li>
+    <div class="bookmark-text">
     <%# Is it @bookmarks or @lists!?  %>
     <%= bookmark.movie.title %> - <%= bookmark.comment %>
-    <%= link_to 'Delete', bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: 'Go ahead, delete it. Just like my hopes and dreams....' }, class: 'btn btn-danger' %>
-    </li>
+    <br>
+    <%= link_to 'Delete', bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: 'Go ahead, delete it. Just like my hopes and dreams....' }, class: 'btn btn-danger btn-sm delete-button' %>
+    </div>
+
   <% end %>
-</ul>
 
 <%= link_to 'Add Bookmark', new_list_bookmark_path(@list), class: 'btn btn-secondary btn-lg' %>
 </div>
